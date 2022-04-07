@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<select name="temperature" id="2">
+    <option value="m">m</option>
+    <option value="f">ft</option>
+</select>
+<button onclick="change()">Change</button>
+<div id="3"></div>
+<script>
+
+    function check(){
+        let t = document.getElementById('input').value;
+        let c = document.getElementById('2').value;
+        if(c=='m'){
+            return  t * 3.279;
+        }
+        if(c == 'f'){
+            return t * 0.305;
+        }
+    }
+    function change(){
+        document.getElementById('3').innerHTML = check();
+    }
+
+
+</script>
+</body>
+</html>
